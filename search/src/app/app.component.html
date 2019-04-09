@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<form >
+  <mat-form-field >
+    <input  matInput [matAutocomplete]="auto" [formControl]="myControl">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let user of filteredOptions | async"
+                  [value]="user.name">
+        <span>{{ user.name }}</span>
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+<p>
+  Y can find those names.
+  "Leanne Graham"
+  "Ervin Howell"
+  "Clementine Bauch"
+  "Chelsey Dietrich"
+  "Mrs. Dennis Schulist"
+  "Kurtis Weissnat"
+</p>
